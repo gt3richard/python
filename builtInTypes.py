@@ -98,3 +98,32 @@ value = '12'
 assertEqual(value.zfill(4), '0012')
 
 
+# set type
+animals = {'Dog', 'Duck', 'Pig'}
+pets = {'Dog'}
+
+assertEqual('Dog' in animals, True)
+assertEqual('Cat' not in pets, True)
+assertEqual(pets.issubset(animals), True)
+
+pets = {'Dog', 'Cat'}
+assertEqual(pets.union(animals), {'Dog', 'Cat', 'Duck', 'Pig'})
+assertEqual(pets.intersection(animals), {'Dog'})
+
+pets.add('Bird')
+assertEqual(pets, {'Dog', 'Cat', 'Bird'})
+
+# dict type
+noise = {'Dog':'Bark', 'Cat':'Meow', 'Duck':'Quack'}
+
+assertEqual(noise['Cat'], 'Meow')
+assertEqual('Dog' in noise, True)
+assertEqual(list(noise.keys()), ['Dog', 'Cat', 'Duck'])
+del noise['Duck']
+assertEqual(noise, {'Dog':'Bark', 'Cat':'Meow'})
+
+
+
+
+
+
