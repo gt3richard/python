@@ -1,6 +1,3 @@
-
-input = 'Hello World'
-
 class Solution:
     def __init__(self, msg):
         print('Setup')
@@ -12,4 +9,5 @@ class Solution:
 s = Solution('Hello World')
 output = s.message()
 
-assert input == output, 'Not Equal'
+
+assert 'Hello World' == output, 'Not Equal'
